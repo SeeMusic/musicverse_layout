@@ -9,6 +9,7 @@ import (
 	"musicverse/app/example/internal/service"
 )
 
+// nolint:dupl
 // NewGRPCServer new a gRPC server.
 func NewGRPCServer(c *conf.Server, greeter *service.GreeterService, logger log.Logger) *grpc.Server {
 	var opts = []grpc.ServerOption{

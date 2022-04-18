@@ -1,20 +1,21 @@
 package data
 
 import (
+	"musicverse/app/example/internal/conf"
+
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/google/wire"
-	"musicverse/app/example/internal/conf"
 )
 
 // ProviderSet is data providers.
 var ProviderSet = wire.NewSet(NewData, NewGreeterRepo)
 
-// Data .
+// Data is data.
 type Data struct {
 	// TODO wrapped database client
 }
 
-// NewData .
+// NewData creates new data.
 func NewData(c *conf.Data, logger log.Logger) (*Data, func(), error) {
 	cleanup := func() {
 		log.NewHelper(logger).Info("closing the data resources")
