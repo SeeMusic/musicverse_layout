@@ -7,13 +7,14 @@
 package main
 
 import (
-	"github.com/go-kratos/kratos/v2"
-	"github.com/go-kratos/kratos/v2/log"
 	"musicverse/app/example/internal/biz"
 	"musicverse/app/example/internal/conf"
 	"musicverse/app/example/internal/data"
 	"musicverse/app/example/internal/server"
 	"musicverse/app/example/internal/service"
+
+	"github.com/go-kratos/kratos/v2"
+	"github.com/go-kratos/kratos/v2/log"
 )
 
 // Injectors from wire.go:

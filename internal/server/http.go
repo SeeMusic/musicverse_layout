@@ -1,4 +1,4 @@
-package server
+package server //nolint:dupl
 
 import (
 	v1 "musicverse/api/example/v1"
@@ -10,7 +10,6 @@ import (
 	"github.com/go-kratos/kratos/v2/transport/http"
 )
 
-// nolint:dupl
 // NewHTTPServer new http server
 func NewHTTPServer(c *conf.Server, greeter *service.GreeterService, logger log.Logger) *http.Server {
 	var opts = []http.ServerOption{

@@ -1,15 +1,15 @@
-package server
+package server //nolint:dupl
 
 import (
-	"github.com/go-kratos/kratos/v2/log"
-	"github.com/go-kratos/kratos/v2/middleware/recovery"
-	"github.com/go-kratos/kratos/v2/transport/grpc"
 	v1 "musicverse/api/example/v1"
 	"musicverse/app/example/internal/conf"
 	"musicverse/app/example/internal/service"
+
+	"github.com/go-kratos/kratos/v2/log"
+	"github.com/go-kratos/kratos/v2/middleware/recovery"
+	"github.com/go-kratos/kratos/v2/transport/grpc"
 )
 
-// nolint:dupl
 // NewGRPCServer new a gRPC server.
 func NewGRPCServer(c *conf.Server, greeter *service.GreeterService, logger log.Logger) *grpc.Server {
 	var opts = []grpc.ServerOption{
