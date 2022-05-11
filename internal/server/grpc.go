@@ -1,4 +1,4 @@
-package server //nolint:dupl
+package server
 
 import (
 	v1 "musicverse/api/example/v1"
